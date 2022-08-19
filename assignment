@@ -1,0 +1,26 @@
+let fetch=require("node-fetch")
+fetch('https://jsonplaceholder.typicode.com/todo/2'),
+// fetch('https://jsonplaceholder.typicode.com/posts/2'),for getting posts
+{
+    method:"POST",
+
+    headers:{
+        "Content-type":"application/json"
+    },
+    body: JSON.stringify({
+       userId:1,
+       body:"This is a js class",
+       title:"AdaLab",
+    })
+
+    // method:"GET",
+}
+.then(function (response) {
+return response.json();
+})
+.then(function (data) {
+console.log('success', data);
+})
+.catch(function (error) {
+console.log('error', error);
+});
