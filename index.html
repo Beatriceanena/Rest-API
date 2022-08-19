@@ -21,7 +21,25 @@
 </ul>
 
 <script src="index.js">
-    document.getElementById(products)
+    
+    var products=document.getElementById(products)
+            let productlist=[]
+            $.getJSON('/products',function(products){
+                console.log(productlist)})
+
+
+    var fruList=document.getElementById(fruilist)   
+          let fruitslist=[]     
+          $getJSON('/products/fruits', function(products){
+            console.log(fruitslist)
+          })    
+    
+    var vegList=document.getElementById(vegList)
+        let vegList=[]
+        $getJSON('/products/vegetables', function(products){
+         console.log(vegList)
+        })
+
     
 </script>
 <script src="server.js"></script>
